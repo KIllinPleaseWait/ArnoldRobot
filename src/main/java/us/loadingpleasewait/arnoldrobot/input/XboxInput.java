@@ -16,7 +16,7 @@ public class XboxInput {
 	 * @return value to move forward from -1 to 1
 	 */
 	public double movementValue() {
-		return Arnold.invert(Math.round((float)controller.getRawAxis(XboxConstants.LEFT_Y_AXIS * 100))) / 100d;
+		return Arnold.invert(Math.round((float)controller.getRawAxis(XboxConstants.LEFT_Y_AXIS) * 100)) / 100d;
 	}
 
 	/**

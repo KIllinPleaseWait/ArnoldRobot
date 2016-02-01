@@ -3,6 +3,7 @@ import org.impact2585.lib2585.RobotEnvironment;
 
 import edu.wpi.first.wpilibj.RobotBase;
 import us.loadingpleasewait.arnoldrobot.systems.WheelSystem;
+import us.loadingpleasewait.arnoldrobot.input.XboxInput;
 
 /**
  * Environment containing the RobotSystems
@@ -10,14 +11,18 @@ import us.loadingpleasewait.arnoldrobot.systems.WheelSystem;
 public class Environment extends RobotEnvironment {
 
 	private static final long serialVersionUID = -4080895200275405374L;
-	
+
 	private WheelSystem wheels;
+	private XboxInput input;
 
 	/**
 	 * @param robot robot to set
 	 */
 	public Environment(RobotBase robot) {
 		super(robot);
+		wheels = new WheelSystem(this);
+		input = new XboxInput();
+		wheels.init(this);
 	}
 
 	/* (non-Javadoc)
