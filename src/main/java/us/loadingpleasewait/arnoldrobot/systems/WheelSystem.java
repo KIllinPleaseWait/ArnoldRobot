@@ -30,7 +30,7 @@ public class WheelSystem implements RobotSystem {
 		drive = new RobotDrive(new Victor(1), new Victor(2), new Victor(3),  new Victor(4));
 		drive.setInvertedMotor(RobotDrive.MotorType.kFrontRight , true );
 		drive.setInvertedMotor(RobotDrive.MotorType.kRearRight , true );
-		input = new XboxInput();
+		input = environment.getInput();
 	}
 
 	/* (non-Javadoc)

@@ -20,9 +20,8 @@ public class Environment extends RobotEnvironment {
 	 */
 	public Environment(RobotBase robot) {
 		super(robot);
-		wheels = new WheelSystem(this);
 		input = new XboxInput();
-		wheels.init(this);
+		wheels = new WheelSystem(this);
 	}
 
 	/* (non-Javadoc)
@@ -31,6 +30,20 @@ public class Environment extends RobotEnvironment {
 	@Override
 	public void destroy() {
 		wheels.destroy();
+	}
+
+	/**
+	 * @return the input
+	 */
+	public XboxInput getInput() {
+		return input;
+	}
+
+	/**
+	 * @param input the input to set
+	 */
+	public void setInput(XboxInput input) {
+		this.input = input;
 	}
 
 	/**
