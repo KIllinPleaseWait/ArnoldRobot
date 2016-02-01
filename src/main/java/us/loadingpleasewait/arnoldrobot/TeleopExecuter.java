@@ -8,6 +8,9 @@ public class TeleopExecuter extends RunnableExecuter implements Initializable {
 
 	private static final long serialVersionUID = 4016295475222526857L;
 
+	/**
+	 * @param environment environment to initialize with
+	 */
 	public TeleopExecuter(Environment environment) {
 		init(environment);
 	}

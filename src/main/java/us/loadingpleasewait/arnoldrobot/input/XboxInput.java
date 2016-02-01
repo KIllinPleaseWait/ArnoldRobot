@@ -1,7 +1,9 @@
-package us.loadingpleasewait.arnoldrobot;
+package us.loadingpleasewait.arnoldrobot.input;
 
 import org.impact2585.lib2585.XboxConstants;
+
 import edu.wpi.first.wpilibj.Joystick;
+import us.loadingpleasewait.arnoldrobot.Arnold;
 
 /**
  * Get input from an XBox 360 controller

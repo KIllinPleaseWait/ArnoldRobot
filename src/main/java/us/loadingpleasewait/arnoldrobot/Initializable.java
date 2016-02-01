@@ -1,4 +1,5 @@
 package us.loadingpleasewait.arnoldrobot;
+
 /**
  * SAM interface with an init method
  */

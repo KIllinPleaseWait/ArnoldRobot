@@ -1,5 +1,6 @@
-package us.loadingpleasewait.arnoldrobot;
+package us.loadingpleasewait.arnoldrobot.systems;
 import edu.wpi.first.wpilibj.RobotDrive;
+import us.loadingpleasewait.arnoldrobot.Environment;
 
 /**
  * System that controls the drivetrain
@@ -8,6 +9,9 @@ public class WheelSystem implements RobotSystem {
 	
 	private RobotDrive drive;
 
+	/**
+	 * @param environment environment to initialize with
+	 */
 	public WheelSystem(Environment environment) {
 		init(environment);
 	}

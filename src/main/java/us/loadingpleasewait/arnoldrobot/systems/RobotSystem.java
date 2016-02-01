@@ -1,5 +1,7 @@
-package us.loadingpleasewait.arnoldrobot;
+package us.loadingpleasewait.arnoldrobot.systems;
 import org.impact2585.lib2585.Destroyable;
+
+import us.loadingpleasewait.arnoldrobot.Initializable;
 
 /**
  * Subinterface of Runnable, Destroyable and Initializable
