@@ -2,5 +2,4 @@ language: java
 jdk: oraclejdk8
 install: wget http://lhartikk.github.io/ArnoldC.jar
 before_script: python astro_build.py
-script: ./build.sh
-
+script: java -jar ArnoldC.jar src/main/arnoldc/us/loadingpleasewait/arnoldrobot/Arnold.arnoldc
