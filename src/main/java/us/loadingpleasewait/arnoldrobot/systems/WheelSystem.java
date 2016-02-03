@@ -28,8 +28,6 @@ public class WheelSystem implements RobotSystem {
 	@Override
 	public void init(Environment environment) {
 		drive = new RobotDrive(new Victor(1), new Victor(2), new Victor(3),  new Victor(4));
-		drive.setInvertedMotor(RobotDrive.MotorType.kFrontRight , true );
-		drive.setInvertedMotor(RobotDrive.MotorType.kRearRight , true );
 		input = environment.getInput();
 	}
 
@@ -47,7 +45,7 @@ public class WheelSystem implements RobotSystem {
 	 * @param rotation rotation value from -1 to 1
 	 */
 	public void drive(double movement, double rotation){
-		drive.arcadeDrive(movement, rotation);
+		drive.arcadeDrive(movement, -rotation);
 	}
 
 	/* (non-Javadoc)
