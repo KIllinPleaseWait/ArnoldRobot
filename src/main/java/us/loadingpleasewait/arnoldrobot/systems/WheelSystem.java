@@ -36,7 +36,7 @@ public class WheelSystem implements RobotSystem {
 	 */
 	@Override
 	public void run() {
-		 drive(input.movementValue(), 1.0 / Arnold.cube(Math.round((float)(1 / input.rotatationValue()))));
+		 drive(input.movementValue(), input.rotatationValue());
 	}
 
 	/**
