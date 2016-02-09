@@ -3,7 +3,6 @@ import edu.wpi.first.wpilibj.RobotDrive;
 import edu.wpi.first.wpilibj.Victor;
 import us.loadingpleasewait.arnoldrobot.Environment;
 import us.loadingpleasewait.arnoldrobot.input.XboxInput;
-import us.loadingpleasewait.arnoldrobot.Arnold;
 
 /**
  * System that controls the drivetrain
