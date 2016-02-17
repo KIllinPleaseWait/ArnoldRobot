@@ -3,6 +3,7 @@ import edu.wpi.first.wpilibj.RobotDrive;
 import edu.wpi.first.wpilibj.Victor;
 import us.loadingpleasewait.arnoldrobot.Environment;
 import us.loadingpleasewait.arnoldrobot.input.XboxInput;
+import us.loadingpleasewait.arnoldrobot.Arnold;
 
 /**
  * System that controls the drivetrain
@@ -11,8 +12,8 @@ public class WheelSystem implements RobotSystem {
 
 	private RobotDrive drive;
 	private XboxInput input;
-
-
+	private boolean switchDirectionHeld;
+	private int direction = 1;
 
 	/**
 	 * @param environment environment to initialize with
@@ -35,7 +36,14 @@ public class WheelSystem implements RobotSystem {
 	 */
 	@Override
 	public void run() {
-		 drive(input.movementValue(), input.rotatationValue());
+		// toggle direction
+		int toggle = input.directionToggle() ? 1 : 0;
+		int held = switchDirectionHeld ? 1 : 0;
+		if(Arnold.switchDirection(toggle, held) != 0){
+			direction = Arnold.invert(direction);
+		}
+		switchDirectionHeld = input.directionToggle();
+		drive(direction * input.movementValue(), input.rotatationValue());
 	}
 
 	/**

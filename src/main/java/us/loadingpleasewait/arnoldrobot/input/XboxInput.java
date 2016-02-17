@@ -26,4 +26,11 @@ public class XboxInput {
 		return controller.getRawAxis(XboxConstants.RIGHT_X_AXIS);
 	}
 
+	/**
+	* @return button for changing which side is considered the front
+	*/
+	public boolean directionToggle(){
+		return controller.getRawButton(XboxConstants.Y_BUTTON);
+	}
+
 }
